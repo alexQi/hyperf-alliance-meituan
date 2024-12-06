@@ -25,8 +25,8 @@ class Factory
         $config = $container->get(ConfigInterface::class);
 
         // 获取美团相关配置
-        $meituanConfig = $config->get('meituan', []);
+        $config = $config->get('meituan', []);
 
-        return new Service($meituanConfig);
+        return new Service($config);
     }
 }
